@@ -29,7 +29,6 @@ const LW_MATERIALIZED_VIEW = 'tickets_view'
 
 export async function GET(req: Request, res: Response) {
   const url = new URL(req.url)
-  console.log(process.env.NEXT_PUBLIC_SUPABASE_URL)
   const username = url.searchParams.get('username') ?? url.searchParams.get('amp;username')
   const assumePlatinum = url.searchParams.get('platinum') ?? url.searchParams.get('amp;platinum')
   const userAgent = req.headers.get('user-agent')
